@@ -1,0 +1,20 @@
+{
+  "buildFiles": [
+    "/Users/osama/Downloads/flutter/packages/flutter_tools/gradle/src/main/groovy/CMakeLists.txt"
+  ],
+  "cleanCommandsComponents": [
+    [
+      "/Users/osama/Library/Android/sdk/cmake/3.22.1/bin/ninja",
+      "-C",
+      "/Users/osama/Documents/ur_turn_driver_app/android/app/.cxx/Debug/731z4j20/armeabi-v7a",
+      "clean"
+    ]
+  ],
+  "buildTargetsCommandComponents": [
+    "/Users/osama/Library/Android/sdk/cmake/3.22.1/bin/ninja",
+    "-C",
+    "/Users/osama/Documents/ur_turn_driver_app/android/app/.cxx/Debug/731z4j20/armeabi-v7a",
+    "{LIST_OF_TARGETS_TO_BUILD}"
+  ],
+  "libraries": {}
+}

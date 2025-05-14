@@ -1,0 +1,2 @@
+/Users/osama/Documents/tawsilty_driver/android/app/.cxx/Debug/444e1w19/arm64-v8a/CMakeFiles/edit_cache.dir
+/Users/osama/Documents/tawsilty_driver/android/app/.cxx/Debug/444e1w19/arm64-v8a/CMakeFiles/rebuild_cache.dir

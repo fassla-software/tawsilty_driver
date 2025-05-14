@@ -1,0 +1,20 @@
+{
+  "buildFiles": [
+    "/Users/osama/Downloads/flutter/packages/flutter_tools/gradle/src/main/groovy/CMakeLists.txt"
+  ],
+  "cleanCommandsComponents": [
+    [
+      "/Users/osama/Library/Android/sdk/cmake/3.22.1/bin/ninja",
+      "-C",
+      "/Users/osama/Documents/flutterApps/7_rakeb_driver_app/android/app/.cxx/RelWithDebInfo/2a4c451d/x86",
+      "clean"
+    ]
+  ],
+  "buildTargetsCommandComponents": [
+    "/Users/osama/Library/Android/sdk/cmake/3.22.1/bin/ninja",
+    "-C",
+    "/Users/osama/Documents/flutterApps/7_rakeb_driver_app/android/app/.cxx/RelWithDebInfo/2a4c451d/x86",
+    "{LIST_OF_TARGETS_TO_BUILD}"
+  ],
+  "libraries": {}
+}

@@ -1,0 +1,20 @@
+{
+  "buildFiles": [
+    "/Users/osama/Downloads/flutter/packages/flutter_tools/gradle/src/main/groovy/CMakeLists.txt"
+  ],
+  "cleanCommandsComponents": [
+    [
+      "/Users/osama/Library/Android/sdk/cmake/3.22.1/bin/ninja",
+      "-C",
+      "/Users/osama/Documents/tawsilty_driver/android/app/.cxx/Debug/444e1w19/x86",
+      "clean"
+    ]
+  ],
+  "buildTargetsCommandComponents": [
+    "/Users/osama/Library/Android/sdk/cmake/3.22.1/bin/ninja",
+    "-C",
+    "/Users/osama/Documents/tawsilty_driver/android/app/.cxx/Debug/444e1w19/x86",
+    "{LIST_OF_TARGETS_TO_BUILD}"
+  ],
+  "libraries": {}
+}

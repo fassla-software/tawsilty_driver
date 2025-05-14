@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>API_KEY</key>
+	<string>AIzaSyCLj7p2VU-RIJCSsplS3ySBz20gG98iOJo</string>
+	<key>GCM_SENDER_ID</key>
+	<string>810616739165</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.sixamtech.ridesharinguser.rideSharingUserApp</string>
+	<key>PROJECT_ID</key>
+	<string>tawselty-49dfb</string>
+	<key>STORAGE_BUCKET</key>
+	<string>tawselty-49dfb.firebasestorage.app</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:810616739165:ios:ba60a71598b5f28edc84b4</string>
+</dict>
+</plist>
