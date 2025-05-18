@@ -41,6 +41,8 @@
   "password_is_required": "Password is required",
   "confirm_password_is_required": "Confirm password is required",
   "password_is_mismatch": "Password is mismatch",
+  "gender_is_required": "Gender is required",
+  "gender": "Gender",
   "phone_number_is_not_valid": "Phone Number is not valid",
   "email_is_required": "Email is required",
   "enter_valid_email": "Enter valid email",
@@ -776,5 +778,7 @@
   "permanently_delete_confirm_msg": "Are you sure? You want to permanently delete your account. You cant retrieve this account in future",
   "for_demo_purpose_use": "For demo purpose use 000000 as OTP",
   "denied_note": "Denied Note",
-  "approval_note": "Approval Note"
+  "approval_note": "Approval Note",
+  "male": "Male",
+  "female": "Female"
 }

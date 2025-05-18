@@ -61,6 +61,44 @@
           "other_platform_oauth_client": []
         }
       }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:810616739165:android:916480bdc73dfe6cdc84b4",
+        "android_client_info": {
+          "package_name": "com.tawsilty.drivier.com"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyByAbAIa89Fye8pNiVNBUQ7YkvbiFodFT0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:810616739165:android:7419418a483e9ae1dc84b4",
+        "android_client_info": {
+          "package_name": "com.tawsilty.eg"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyByAbAIa89Fye8pNiVNBUQ7YkvbiFodFT0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
     }
   ],
   "configuration_version": "1"

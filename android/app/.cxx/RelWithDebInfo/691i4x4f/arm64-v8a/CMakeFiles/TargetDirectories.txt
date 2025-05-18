@@ -1,0 +1,2 @@
+E:/Fassla/tawsilty_driver/android/app/.cxx/RelWithDebInfo/691i4x4f/arm64-v8a/CMakeFiles/edit_cache.dir
+E:/Fassla/tawsilty_driver/android/app/.cxx/RelWithDebInfo/691i4x4f/arm64-v8a/CMakeFiles/rebuild_cache.dir

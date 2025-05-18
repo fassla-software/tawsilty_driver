@@ -14,169 +14,246 @@ import 'package:ride_sharing_user_app/util/dimensions.dart';
 import 'package:ride_sharing_user_app/util/images.dart';
 import 'package:ride_sharing_user_app/util/styles.dart';
 
+import '../../../common_widgets/drop_down_widget.dart';
+
 class AdditionalSignUpScreen1 extends StatelessWidget {
   const AdditionalSignUpScreen1({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: SafeArea(
-          child: GetBuilder<AuthController>(builder: (authController){
-            return Column(children: [
-              const SignUpAppbarWidget(title: 'signup_as_a_driver', progressText: '2_of_3',enableBackButton: true),
-
-              Expanded(child: SingleChildScrollView(
+      body:
+          SafeArea(child: GetBuilder<AuthController>(builder: (authController) {
+        return Column(children: [
+          const SignUpAppbarWidget(
+              title: 'signup_as_a_driver',
+              progressText: '2_of_3',
+              enableBackButton: true),
+          Expanded(
+              child: SingleChildScrollView(
                   child: Column(children: [
-                    const SizedBox(height: Dimensions.paddingSizeSignUp),
-
-                    Text('provide_basic_info'.tr,style: textBold.copyWith(color: Theme.of(context).primaryColor,fontSize: 22)),
-                    const SizedBox(height: Dimensions.paddingSizeSmall),
-
-                    Text('enter_your_information'.tr, style: textRegular.copyWith(
-                      color: Theme.of(context).primaryColor.withOpacity(0.5),fontSize: Dimensions.fontSizeSmall,
-                    )),
-                    const SizedBox(height: Dimensions.paddingSizeLarge),
-
-                    Padding(
-                      padding: EdgeInsets.symmetric(horizontal: Dimensions.paddingSizeDefault),
-                      child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-                        TextFieldTitleWidget(title: '${'first_name'.tr}*'),
-
-                        TextFieldWidget(
-                          hintText: 'first_name'.tr,
-                          capitalization: TextCapitalization.words,
-                          inputType: TextInputType.name,
-                          prefixIcon: Images.person,
-                          controller: authController.fNameController,
-                          focusNode: authController.fNameNode,
-                          nextFocus: authController.lNameNode,
-                          inputAction: TextInputAction.next,
-                        ),
-                        const SizedBox(width: Dimensions.paddingSizeDefault),
-
-                        TextFieldTitleWidget(title: '${'last_name'.tr}*'),
-
-                        TextFieldWidget(
-                          hintText: 'last_name'.tr,
-                          capitalization: TextCapitalization.words,
-                          inputType: TextInputType.name,
-                          prefixIcon: Images.person,
-                          controller: authController.lNameController,
-                          focusNode: authController.lNameNode,
-                          nextFocus: authController.phoneNode,
-                          inputAction: TextInputAction.next,
-                        ),
-
-                        TextFieldTitleWidget(title: '${'phone'.tr}*'),
-
-                        TextFieldWidget(
-                          hintText: 'phone'.tr,
-                          inputType: TextInputType.number,
-                          countryDialCode: authController.countryDialCode,
-                          controller: authController.phoneController,
-                          focusNode: authController.phoneNode,
-                          nextFocus: authController.passwordNode,
-                          inputAction: TextInputAction.next,
-                          onCountryChanged: (CountryCode countryCode){
-                            authController.countryDialCode = countryCode.dialCode!;
-                            authController.setCountryCode(countryCode.dialCode!);
-                            FocusScope.of(context).requestFocus(authController.phoneNode);
-                          },
-                        ),
-
-                        TextFieldTitleWidget(title: '${'password'.tr}*'),
-
-                        TextFieldWidget(
-                          hintText: 'password_hint'.tr,
-                          inputType: TextInputType.text,
-                          prefixIcon: Images.password,
-                          isPassword: true,
-                          controller: authController.passwordController,
-                          focusNode: authController.passwordNode,
-                          nextFocus: authController.confirmPasswordNode,
-                          inputAction: TextInputAction.next,
-                        ),
-
-                        TextFieldTitleWidget(title: '${'confirm_password'.tr}*'),
-
-                        TextFieldWidget(
-                          hintText: 'enter_confirm_password'.tr,
-                          inputType: TextInputType.text,
-                          prefixIcon: Images.password,
-                          controller: authController.confirmPasswordController,
-                          focusNode: authController.confirmPasswordNode,
-                          nextFocus: authController.referralNode,
-                          inputAction: TextInputAction.next,
-                          isPassword: true,
-                        ),
-
-                        if(Get.find<SplashController>().config?.referralEarningStatus ?? false)...[
-                          TextFieldTitleWidget(title: 'referral_code'.tr),
-
-                          TextFieldWidget(
-                            hintText: 'referral_code'.tr,
+            const SizedBox(height: Dimensions.paddingSizeSignUp),
+            Text('provide_basic_info'.tr,
+                style: textBold.copyWith(
+                    color: Theme.of(context).primaryColor, fontSize: 22)),
+            const SizedBox(height: Dimensions.paddingSizeSmall),
+            Text('enter_your_information'.tr,
+                style: textRegular.copyWith(
+                  color: Theme.of(context).primaryColor.withOpacity(0.5),
+                  fontSize: Dimensions.fontSizeSmall,
+                )),
+            const SizedBox(height: Dimensions.paddingSizeLarge),
+            Padding(
+              padding: EdgeInsets.symmetric(
+                  horizontal: Dimensions.paddingSizeDefault),
+              child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    TextFieldTitleWidget(title: '${'first_name'.tr}*'),
+                    TextFieldWidget(
+                      hintText: 'first_name'.tr,
+                      capitalization: TextCapitalization.words,
+                      inputType: TextInputType.name,
+                      prefixIcon: Images.person,
+                      controller: authController.fNameController,
+                      focusNode: authController.fNameNode,
+                      nextFocus: authController.lNameNode,
+                      inputAction: TextInputAction.next,
+                    ),
+                    const SizedBox(width: Dimensions.paddingSizeDefault),
+                    TextFieldTitleWidget(title: '${'last_name'.tr}*'),
+                    TextFieldWidget(
+                      hintText: 'last_name'.tr,
+                      capitalization: TextCapitalization.words,
+                      inputType: TextInputType.name,
+                      prefixIcon: Images.person,
+                      controller: authController.lNameController,
+                      focusNode: authController.lNameNode,
+                      nextFocus: authController.phoneNode,
+                      inputAction: TextInputAction.next,
+                    ),
+                    TextFieldTitleWidget(title: '${'phone'.tr}*'),
+                    TextFieldWidget(
+                      hintText: 'phone'.tr,
+                      inputType: TextInputType.number,
+                      countryDialCode: authController.countryDialCode,
+                      controller: authController.phoneController,
+                      focusNode: authController.phoneNode,
+                      nextFocus: authController.passwordNode,
+                      inputAction: TextInputAction.next,
+                      onCountryChanged: (CountryCode countryCode) {
+                        authController.countryDialCode = countryCode.dialCode!;
+                        authController.setCountryCode(countryCode.dialCode!);
+                        FocusScope.of(context)
+                            .requestFocus(authController.phoneNode);
+                      },
+                    ),
+                    TextFieldTitleWidget(title: '${'gender'.tr}*'),
+                    Row(
+                      children: [
+                        Expanded(
+                          flex: 11,
+                          child: TextFieldWidget(
                             capitalization: TextCapitalization.words,
-                            inputType: TextInputType.text,
-                            prefixIcon: Images.referralIcon1,
-                            controller: authController.referralCodeController,
-                            focusNode: authController.referralNode,
-                            inputAction: TextInputAction.done,
+                            hintText: 'gender'.tr,
+                            isEnabled: false,
+                            inputType: TextInputType.name,
+                            prefixIcon: Images.person,
+                            controller: authController.genderController,
+                            focusNode: authController.genderNode,
+                            nextFocus: authController.passwordNode,
+                            inputAction: TextInputAction.next,
+                            prefixHeight: 70,
                           ),
-                        ],
-
-                      ]),
+                        ),
+                        Expanded(
+                          flex: 1,
+                          child: DropDownWidget<int>(
+                            showText: false,
+                            showLeftSide:
+                                Get.locale?.languageCode == 'en' ? false : true,
+                            menuItemWidth: 120,
+                            icon: Container(
+                              height: 30,
+                              width: 30,
+                              decoration: BoxDecoration(
+                                  color: Theme.of(context).cardColor,
+                                  shape: BoxShape.circle),
+                              child: Icon(Icons.filter_list_sharp,
+                                  color: Theme.of(context).primaryColor,
+                                  size: 16),
+                            ),
+                            maxListHeight: 200,
+                            items: [
+                              CustomDropdownMenuItem<int>(
+                                value: 0,
+                                child: Text(
+                                  "male".tr,
+                                  style: textRegular.copyWith(
+                                      color: Theme.of(context).primaryColor),
+                                ),
+                              ),
+                              CustomDropdownMenuItem<int>(
+                                value: 1,
+                                child: Text(
+                                  "female".tr,
+                                  style: textRegular.copyWith(
+                                      color: Theme.of(context).primaryColor),
+                                ),
+                              )
+                            ],
+                            // hintText: tripController.filterList[Get.find<TripController>().filterIndex].tr,
+                            borderRadius: 5,
+                            onChanged: (int selectedItem) {
+                              if (selectedItem == 0) {
+                                authController.genderController.text =
+                                    'male'.tr;
+                              } else {
+                                authController.genderController.text =
+                                    'female'.tr;
+                              }
+                            },
+                          ),
+                        ),
+                      ],
                     ),
-                    const SizedBox(height: Dimensions.paddingSizeLarge),
-
-                    ButtonWidget(
-                      margin: EdgeInsets.symmetric(horizontal: Dimensions.paddingSizeDefault),
-                      radius: Dimensions.radiusExtraLarge,
-                      buttonText: 'next'.tr,
-                      onPressed: (){
-                        String fName = authController.fNameController.text;
-                        String lName = authController.lNameController.text;
-                        String phone = authController.phoneController.text.trim();
-                        String password = authController.passwordController.text;
-                        String confirmPassword = authController.confirmPasswordController.text;
-
-                        if(fName.isEmpty){
-                          showCustomSnackBar('first_name_is_required'.tr);
-                          FocusScope.of(context).requestFocus(authController.fNameNode);
-                        }else if(lName.isEmpty){
-                          showCustomSnackBar('last_name_is_required'.tr);
-                          FocusScope.of(context).requestFocus(authController.lNameNode);
-                        }else if(phone.isEmpty){
-                          showCustomSnackBar('phone_is_required'.tr);
-                          FocusScope.of(context).requestFocus(authController.phoneNode);
-                        }else if(!PhoneNumber.parse(authController.countryDialCode + phone).isValid(type: PhoneNumberType.mobile)){
-                          showCustomSnackBar('phone_number_is_not_valid'.tr);
-                          FocusScope.of(context).requestFocus(authController.phoneNode);
-                        }else if(password.isEmpty){
-                          showCustomSnackBar('password_is_required'.tr);
-                          FocusScope.of(context).requestFocus(authController.passwordNode);
-                        }else if(password.length<8){
-                          showCustomSnackBar('minimum_password_length_is_8'.tr);
-                          FocusScope.of(context).requestFocus(authController.passwordNode);
-                        }else if(confirmPassword.isEmpty){
-                          showCustomSnackBar('confirm_password_is_required'.tr);
-                          FocusScope.of(context).requestFocus(authController.confirmPasswordNode);
-                        }else if(password != confirmPassword){
-                          showCustomSnackBar('password_is_mismatch'.tr);
-                          FocusScope.of(context).requestFocus(authController.confirmPasswordNode);
-                        }else{
-                          Get.to(()=> const AdditionalSignUpScreen2());
-
-                        }
-
-                        },
+                    TextFieldTitleWidget(title: '${'password'.tr}*'),
+                    TextFieldWidget(
+                      hintText: 'password_hint'.tr,
+                      inputType: TextInputType.text,
+                      prefixIcon: Images.password,
+                      isPassword: true,
+                      controller: authController.passwordController,
+                      focusNode: authController.passwordNode,
+                      nextFocus: authController.confirmPasswordNode,
+                      inputAction: TextInputAction.next,
                     ),
-                    const SizedBox(height: Dimensions.paddingSizeLarge),
-                  ])
-              ))
+                    TextFieldTitleWidget(title: '${'confirm_password'.tr}*'),
+                    TextFieldWidget(
+                      hintText: 'enter_confirm_password'.tr,
+                      inputType: TextInputType.text,
+                      prefixIcon: Images.password,
+                      controller: authController.confirmPasswordController,
+                      focusNode: authController.confirmPasswordNode,
+                      nextFocus: authController.referralNode,
+                      inputAction: TextInputAction.next,
+                      isPassword: true,
+                    ),
+                    if (Get.find<SplashController>()
+                            .config
+                            ?.referralEarningStatus ??
+                        false) ...[
+                      TextFieldTitleWidget(title: 'referral_code'.tr),
+                      TextFieldWidget(
+                        hintText: 'referral_code'.tr,
+                        capitalization: TextCapitalization.words,
+                        inputType: TextInputType.text,
+                        prefixIcon: Images.referralIcon1,
+                        controller: authController.referralCodeController,
+                        focusNode: authController.referralNode,
+                        inputAction: TextInputAction.done,
+                      ),
+                    ],
+                  ]),
+            ),
+            const SizedBox(height: Dimensions.paddingSizeLarge),
+            ButtonWidget(
+              margin: EdgeInsets.symmetric(
+                  horizontal: Dimensions.paddingSizeDefault),
+              radius: Dimensions.radiusExtraLarge,
+              buttonText: 'next'.tr,
+              onPressed: () {
+                String fName = authController.fNameController.text;
+                String lName = authController.lNameController.text;
+                String phone = authController.phoneController.text.trim();
+                String password = authController.passwordController.text;
+                String confirmPassword =
+                    authController.confirmPasswordController.text;
+                String gender = authController.genderController.text;
 
-            ]);
-          })
-      ),
+                if (fName.isEmpty) {
+                  showCustomSnackBar('first_name_is_required'.tr);
+                  FocusScope.of(context).requestFocus(authController.fNameNode);
+                } else if (lName.isEmpty) {
+                  showCustomSnackBar('last_name_is_required'.tr);
+                  FocusScope.of(context).requestFocus(authController.lNameNode);
+                } else if (phone.isEmpty) {
+                  showCustomSnackBar('phone_is_required'.tr);
+                  FocusScope.of(context).requestFocus(authController.phoneNode);
+                } else if (!PhoneNumber.parse(
+                        authController.countryDialCode + phone)
+                    .isValid(type: PhoneNumberType.mobile)) {
+                  showCustomSnackBar('phone_number_is_not_valid'.tr);
+                  FocusScope.of(context).requestFocus(authController.phoneNode);
+                } else if (gender.isEmpty) {
+                  showCustomSnackBar('gender_is_required'.tr);
+                  FocusScope.of(context)
+                      .requestFocus(authController.genderNode);
+                } else if (password.isEmpty) {
+                  showCustomSnackBar('password_is_required'.tr);
+                  FocusScope.of(context)
+                      .requestFocus(authController.passwordNode);
+                } else if (password.length < 8) {
+                  showCustomSnackBar('minimum_password_length_is_8'.tr);
+                  FocusScope.of(context)
+                      .requestFocus(authController.passwordNode);
+                } else if (confirmPassword.isEmpty) {
+                  showCustomSnackBar('confirm_password_is_required'.tr);
+                  FocusScope.of(context)
+                      .requestFocus(authController.confirmPasswordNode);
+                } else if (password != confirmPassword) {
+                  showCustomSnackBar('password_is_mismatch'.tr);
+                  FocusScope.of(context)
+                      .requestFocus(authController.confirmPasswordNode);
+                } else {
+                  Get.to(() => const AdditionalSignUpScreen2());
+                }
+              },
+            ),
+            const SizedBox(height: Dimensions.paddingSizeLarge),
+          ])))
+        ]);
+      })),
     );
   }
 }

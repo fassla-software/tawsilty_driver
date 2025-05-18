@@ -1,0 +1,2 @@
+E:/Fassla/tawsilty_driver/android/app/.cxx/Debug/3s3g716b/armeabi-v7a/CMakeFiles/edit_cache.dir
+E:/Fassla/tawsilty_driver/android/app/.cxx/Debug/3s3g716b/armeabi-v7a/CMakeFiles/rebuild_cache.dir
