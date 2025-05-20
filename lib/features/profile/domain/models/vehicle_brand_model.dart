@@ -6,14 +6,14 @@ class VehicleBrandModel {
   String? offset;
   List<Brand>? data;
 
-  VehicleBrandModel(
-      {this.responseCode,
-        this.message,
-        this.totalSize,
-        this.limit,
-        this.offset,
-        this.data,
-        });
+  VehicleBrandModel({
+    this.responseCode,
+    this.message,
+    this.totalSize,
+    this.limit,
+    this.offset,
+    this.data,
+  });
 
   VehicleBrandModel.fromJson(Map<String, dynamic> json) {
     responseCode = json['response_code'];
@@ -55,12 +55,12 @@ class Brand {
 
   Brand(
       {this.id,
-        this.name,
-        this.description,
-        this.image,
-        this.isActive,
-        this.vehicleModels,
-        this.createdAt});
+      this.name,
+      this.description,
+      this.image,
+      this.isActive,
+      this.vehicleModels,
+      this.createdAt});
 
   Brand.fromJson(Map<String, dynamic> json) {
     id = json['id'];
@@ -85,8 +85,7 @@ class Brand {
     data['image'] = image;
     data['is_active'] = isActive;
     if (vehicleModels != null) {
-      data['vehicle_models'] =
-          vehicleModels!.map((v) => v.toJson()).toList();
+      data['vehicle_models'] = vehicleModels!.map((v) => v.toJson()).toList();
     }
     data['created_at'] = createdAt;
     return data;
@@ -97,7 +96,7 @@ class VehicleModels {
   String? id;
   String? name;
   int? seatCapacity;
-  int? maximumWeight;
+  num? maximumWeight;
   int? hatchBagCapacity;
   String? engine;
   String? description;
@@ -107,15 +106,15 @@ class VehicleModels {
 
   VehicleModels(
       {this.id,
-        this.name,
-        this.seatCapacity,
-        this.maximumWeight,
-        this.hatchBagCapacity,
-        this.engine,
-        this.description,
-        this.image,
-        this.isActive,
-        this.createdAt});
+      this.name,
+      this.seatCapacity,
+      this.maximumWeight,
+      this.hatchBagCapacity,
+      this.engine,
+      this.description,
+      this.image,
+      this.isActive,
+      this.createdAt});
 
   VehicleModels.fromJson(Map<String, dynamic> json) {
     id = json['id'];
@@ -126,7 +125,7 @@ class VehicleModels {
     engine = json['engine'];
     description = json['description'];
     image = json['image'];
-    isActive = json['is_active'] ? 1: 0;
+    isActive = json['is_active'] ? 1 : 0;
     createdAt = json['created_at'];
   }
 

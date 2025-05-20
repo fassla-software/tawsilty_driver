@@ -2,7 +2,7 @@ import 'package:ride_sharing_user_app/localization/language_model.dart';
 import 'package:ride_sharing_user_app/util/images.dart';
 
 class AppConstants {
-  static const String appName = 'Drivo Driver';
+  static const String appName = 'Tawsilty Driver';
   static const String baseUrl =
       'https://tawselty.com'; /* 'https://drivemond-admin.codemond.com'; */
   static const String polylineMapKey =

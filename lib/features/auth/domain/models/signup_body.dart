@@ -14,21 +14,23 @@ class SignUpBody {
   String? referralCode;
   List<String>? services;
   String? fcmToken;
+  int? gender;
 
-  SignUpBody({this.fName,
-    this.lName,
-    this.phone,
-    this.email,
-    this.password,
-    this.confirmPassword ,
-    this.address,
-    this.identificationType,
-    this.identityNumber,
-    this.deviceToken,
-    this.services,
-    this.referralCode,
-    this.fcmToken
-  });
+  SignUpBody(
+      {this.fName,
+      this.lName,
+      this.phone,
+      this.email,
+      this.password,
+      this.confirmPassword,
+      this.address,
+      this.identificationType,
+      this.identityNumber,
+      this.deviceToken,
+      this.services,
+      this.referralCode,
+      this.fcmToken,
+      this.gender});
 
   SignUpBody.fromJson(Map<String, dynamic> json) {
     fName = json['first_name'];
@@ -43,6 +45,7 @@ class SignUpBody {
     deviceToken = json['fcm_token'];
     referralCode = json['referral_code'];
     fcmToken = json['fcm_token'];
+    fcmToken = json['gender'];
   }
 
   Map<String, String> toJson() {
@@ -56,10 +59,11 @@ class SignUpBody {
     data['address'] = address!;
     data['identification_type'] = identificationType!;
     data['identification_number'] = identityNumber!;
-    data['fcm_token'] = deviceToken??'';
+    data['fcm_token'] = deviceToken ?? '';
     data['service'] = jsonEncode(services);
     data['referral_code'] = referralCode ?? '';
     data['fcm_token'] = fcmToken ?? '';
+    data['gender'] = gender.toString();
     return data;
   }
 }

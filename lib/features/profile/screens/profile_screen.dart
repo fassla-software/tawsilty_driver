@@ -210,6 +210,13 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                     : '${profileController.profileInfo!.phone!.substring(1)}+',
                               ),
                               ProfileItemWidget(
+                                title: 'gender',
+                                value:
+                                    profileController.profileInfo?.gender == 0
+                                        ? 'male'.tr
+                                        : 'female'.tr,
+                              ),
+                              ProfileItemWidget(
                                 title: 'mail_address',
                                 value:
                                     profileController.profileInfo?.email ?? '',

@@ -52,7 +52,7 @@ class DefaultFirebaseOptions {
 
   static const FirebaseOptions android = FirebaseOptions(
     apiKey: 'AIzaSyByAbAIa89Fye8pNiVNBUQ7YkvbiFodFT0',
-    appId: '1:810616739165:android:b59aecee7ceff4ffdc84b4',
+    appId: '1:810616739165:android:916480bdc73dfe6cdc84b4',
     messagingSenderId: '810616739165',
     projectId: 'tawselty-49dfb',
     storageBucket: 'tawselty-49dfb.firebasestorage.app',

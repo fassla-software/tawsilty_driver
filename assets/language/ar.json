@@ -37,6 +37,8 @@
   "last_name_is_required": "إسم العائلة مطلوب",
   "phone_is_required": "الهاتف مطلوب",
   "password_is_required": "كلمة المرور مطلوبة",
+  "gender_is_required": "النوع مطلوب",
+  "gender": "النوع",
   "confirm_password_is_required": "تأكيد كلمة المرور مطلوب",
   "password_is_mismatch": "كلمة المرور غير متطابقة",
   "phone_number_is_not_valid": "رقم الهاتف غير صالح",
@@ -769,5 +771,7 @@
   "file_already_downloaded": "تم تنزيل الملف بالفعل",
   "downloaded_successfully": "تم التنزيل بنجاح",
   "download_failed": "فشل التنزيل",
-  "approval_note": "مذكرة الموافقة"
+  "approval_note": "مذكرة الموافقة",
+  "male": "ذكر",
+  "female": "أنثى"
 }

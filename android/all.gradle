@@ -1,0 +1,6 @@
+// This file overrides SDK versions for all Flutter plugins
+ext {
+    // Force all Flutter plugins to use SDK 33
+    flutterCompileSdkVersion = 34
+    flutterTargetSdkVersion = 34
+}
