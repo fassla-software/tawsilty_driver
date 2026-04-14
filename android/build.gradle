@@ -1,4 +1,14 @@
-
+buildscript {
+    repositories {
+        google()
+        mavenCentral()
+    }
+    dependencies {
+        // Apply consistent Android SDK versions
+        classpath 'com.android.tools.build:gradle:8.9.1'
+        apply from: "all.gradle"
+    }
+}
 
 allprojects {
     repositories {

@@ -2,9 +2,9 @@ import 'package:ride_sharing_user_app/localization/language_model.dart';
 import 'package:ride_sharing_user_app/util/images.dart';
 
 class AppConstants {
-  static const String appName = 'Tawsilty Driver';
+  static const String appName = 'Captain Drive Driver';
   static const String baseUrl =
-      'https://tawselty.com'; /* 'https://drivemond-admin.codemond.com'; */
+      'https://captaindrive.online'; /* 'https://drivemond-admin.codemond.com'; */
   static const String polylineMapKey =
       'AIzaSyCHj3QwVPXAcG57hgUCowCRtbc4moArVH0';
   /* 'AIzaSyCGSZyU5GjFtJuay5jjqRD-xIr3XhGu1Ek'; */

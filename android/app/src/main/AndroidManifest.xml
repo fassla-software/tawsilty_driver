@@ -27,7 +27,7 @@
 
     <application
         android:requestLegacyExternalStorage="true"
-        android:label="Tawselty"
+        android:label="Captain Drive Driver"
         android:name="${applicationName}"
         android:extractNativeLibs="true"
         android:icon="@mipmap/launcher_icon"
