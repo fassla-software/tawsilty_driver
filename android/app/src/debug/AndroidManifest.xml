@@ -1,4 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.tawsilty.drivier.com">
     
     <uses-permission android:name="android.permission.INTERNET" />
@@ -26,6 +27,7 @@
     </queries>
 
     <application
+        tools:replace="android:label"
         android:requestLegacyExternalStorage="true"
         android:label="Tawselty"
         android:name="${applicationName}"

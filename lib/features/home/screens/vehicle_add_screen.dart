@@ -422,7 +422,7 @@ class _VehicleAddScreenState extends State<VehicleAddScreen> {
                         fuelType: fuelType,
                         driverId: profileController.profileInfo!.id??"123456789",
                         ownership: 'driver',
-                        parcelCapacityWeight: parcelWeightCapacity.text.trim()
+                        parcelCapacityWeight: '10'
                     );
                     if(widget.vehicleInfo == null){
                       profileController.addNewVehicle(body);
